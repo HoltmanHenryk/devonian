@@ -485,7 +485,16 @@ object DungeonMap : HudFeature(
         "Color Room Name",
         subcategory = "Style",
     )
-    var SETTING_RENDER_HIDDEN_ROOMS = false
+    var SETTING_RENDER_HIDDEN_ROOMS = addSwitch(
+        "renderHiddenRooms",
+        false,
+        "",
+        "Render Hidden Rooms",
+        subcategory = "Behavior",
+        cheeto = true,
+        isHidden = true,
+    )
+    
     private val SETTING_HIDDEN_ROOM_DARKEN = addDecimalSlider(
         "hiddenRoomDarken",
         0.7,
@@ -586,7 +595,7 @@ object DungeonMap : HudFeature(
                     DungeonMapRoomInfoAlignment.from(SETTING_TEXT_ALIGNMENT.getCurrent()),
                     Shadow.from(SETTING_TEXT_SHADOW.get()),
                     SETTING_COLOR_ROOM_TEXT.get(),
-                    SETTING_RENDER_HIDDEN_ROOMS,
+                    SETTING_RENDER_HIDDEN_ROOMS.get(),
                     Dungeons.started.value,
                     SETTING_HIDDEN_ROOM_DARKEN.get(),
                     SETTING_MC_TEXT.get(),
