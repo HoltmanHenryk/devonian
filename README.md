@@ -1,3 +1,5 @@
+# No need to use this, just use updated regular devonian with [this](https://github.com/DocilElm/devoniandoogan)
+
 # devonian
 Devonian is a minecraft mod focused on enhancing your gameplay experience while playing Hypixel Skyblock.
 Adding various QOL features for a better experience while gaming.
